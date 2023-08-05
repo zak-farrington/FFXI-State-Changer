@@ -1,0 +1,111 @@
+Change Log for hAx FFXI State Changer by Zak Farrington alias fritz
+Copyright (C) 2005 hAx Studios Ltd.
+All rights reserved.
+
+http://hax-studios.net
+
+=======================================================================
+Date			Change
+
+10/14/05		* Fixed a error in ReadConfigFile() where comment blocks weren't getting ignored properly
+             		  which caused the fgets() loop to continue forever thus the config file contents weren't being
+			  read at all.
+			* Updated hard coded offsets in cConfig.
+			* Updated config file.
+			* Set version to v1.1.  No binary updates should be needed due to the *WORKING* config file.
+			 
+
+08/18/05		* Added GetSpeed().
+			* Added GetSpeedString(). (Once again did the radio button updating in here... bad me.)
+			* Added CHECK_SPEED_TIMER.
+			* Removed all GUI updating code from the timers and moved it all into
+			  UpdateInformation() which can just be called from the timers.
+			  Better to do this since I had to update all the info on initalization anyway.
+			* Removed PROCESS_VM_WRITE flag from a lot of OpenProcess() calls where
+			  writing wasn't involved at all.
+			* Increased timer intervalls for less CPU usage... CHECK_STATE_ADDRESS is now running
+			  every 3 seconds, but we shouldn't run into a problem since we call CFFXI::GetStateAddress()
+			  at program intialization.
+			* Regrouped all the radio buttons... sounds easy but it was a pain in teh arse.
+			* Added 'About' MessageBox.
+			* Updated version info.
+			* Ready to go for release.
+			* Added debugging protection.
+			* Ditched IsDebuggerPresent() and made my own version so it can't be hooked as easily.
+			* Just realized I was going open source so all my debugger protections are pointless... oh well.
+
+
+08/17/05	
+			* Changed initialization of CPlayer and CFFXI
+			  from dynamic to static for less memory usage.
+			* Added configuration file code.
+			* Added C-style comments support for configuration file.
+			* Renamed sStats structure to sPlayerInfo.
+			* Renamed dwNpcMapOffset to dwPcMapOffset(it was a typo).
+			* Renamed pFFXI and pPlayer to cFFXI and cPlayer. 
+			  They're not pointers anymore anyway.
+			* Added strCharacterName and dwCurrentState to sPlayerInfo structure.
+			* Added CConfig class.
+			* Moved dwPlayerStatsOffset, dwPlayerInfoOffset, dwPcMapOffset,
+			  strPolExeName and strFFXIModName to CConfig.
+			* Edited the '[:: Error ::]' and '[:: Warning ::]' titles to 
+			  '[:: hAx FFXI State Changer: %s ::]'.
+			* Renamed strMessage variables to strBuffer, since that's what they were
+			  mostly used for anyways.
+			* Renamed & moved the strBuffer inside GetStateString() to strStateString
+			  inside the CPlayer->sPlayerInfo structure.
+			* Added SPEED_X defines.
+			* Added ChangeSpeed();
+			* Further modified GUI.
+			* Added hotkey support.
+			* Added user-defined hotkey support.
+			* Edited all radio buttons to make sure they prefix either IDC_STATE_* or IDC_SPEED_*.
+			* State radio buttons now update to your current state, even if it's modified in game
+			  rather than the program itself. (Inserted into GetStateString()... not really where
+			  it should belong but I'm rushing, I gotta make a release in two days.)
+			* Changed all the SetWindowText() and GetWindowText() calls to SetDlgItemText() and
+			  GetDlgItemText() like it should've been the first time around.
+
+
+08/16/05	
+			* Added memory leak detection for debugging.
+			* Fixed miscellaneous memory leaks.
+
+
+08/14/05	
+			* Implemented the use of classes and created CFFXI and CPlayer.
+			* Added GetTNL().
+			* Added GetName().
+			* Added GetState().
+			* Added GetStateAddress().
+			* Added GetStateString().
+			* Optimized compiler and linker for smaller binary size on 'Release'.
+
+
+08/13/05	
+			* Released Beta 1.
+			* Added WriteLog() for help with debugging.
+			* Removed InjectCode() method of and now we locate
+			  the state address via the PC/NPC map.
+			* Added GetStateString().
+			* Released Beta 2.
+
+
+08/11/05	
+			* Revamped GUI.
+			* Added a new banner.
+			* Added timers to read TNL, name, state address, and current state.
+				
+
+08/08/05	
+			* Got bored and decided to pick up the project again and improve it monumentally.
+			* Removed old Scan() method and added InjectCode() method.
+			* Added ChangeState().
+			* Removed old FindWindow() method of locating FFXI process
+			  and added CreateToolhelp32Snapshot() method.
+			* Added code to determine the FFXiMain.dll base address.
+
+
+07/18/05	
+			* First started and finished a crappy and very unefficent program.
+			* Quit project due to lack of interest.

@@ -1,0 +1,198 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDLG DIALOG DISCARDABLE  0, 0, 229, 271
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "hAx State Changer for FFXI by fritz"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Close",IDC_CLOSE,172,250,50,14,BS_FLAT | NOT WS_TABSTOP
+    CONTROL         "Normal",IDC_STATE_NORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,28,153,38,10
+    CONTROL         "Choco",IDC_STATE_CHOCO,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,51,166,38,10
+    CONTROL         "Attack",IDC_STATE_ATTACK,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,76,153,38,10
+    CONTROL         "Death",IDC_STATE_DEATH,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,100,166,38,10
+    CONTROL         "Rest",IDC_STATE_REST,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,124,153,38,10
+    CONTROL         "Fish",IDC_STATE_FISH,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,149,166,38,10
+    CONTROL         "Sit",IDC_STATE_SIT,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,172,153,38,10
+    CTEXT           "Copyright (C) 2005 hAx Studios Ltd.\r\nAll rights reserved.",
+                    IDC_STATIC,59,238,112,18,WS_DISABLED
+    PUSHBUTTON      "About",IDC_ABOUT,7,250,50,14,BS_FLAT
+    RTEXT           "State: %s",IDC_CURRENT_STATE,114,104,78,8
+    GROUPBOX        "Information",IDC_STATIC,7,76,215,58,BS_CENTER | BS_FLAT
+    LTEXT           "Name: %s",IDC_CHARACTER_NAME,36,104,55,8
+    CONTROL         "TNL: %d",IDC_TNL,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,
+                    36,115,55,8
+    LTEXT           "POL PID: 0x%X",IDC_POL_PID,28,88,74,8
+    RTEXT           "FFXiMain.dll Base: 0x%X",IDC_FFXI_BASE,97,88,104,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,28,100,173,27
+    CONTROL         103,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,7,6,215,66
+    RTEXT           "Speed: %s",IDC_CURRENT_SPEED,114,115,78,8
+    GROUPBOX        "Modify Speed",IDC_STATIC,8,188,214,42,BS_LEFT | BS_FLAT | 
+                    WS_GROUP
+    CONTROL         "Normal",IDC_SPEED_NORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,28,207,38,10
+    CONTROL         "Strider",IDC_SPEED_STRIDER,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,76,207,38,10
+    CONTROL         "Flee",IDC_SPEED_FLEE,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,124,207,38,10
+    CONTROL         "Hyper",IDC_SPEED_HYPER,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,172,207,38,10
+    GROUPBOX        "Modify State",IDC_STATIC,8,140,214,42,BS_RIGHT | 
+                    BS_FLAT | WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 264
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN                ICON    DISCARDABLE     "res/hAx.ico"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,0,1
+ PRODUCTVERSION 1,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Final Fantasy XI State Changer by fritz <http://hax-studios.net>\0"
+            VALUE "CompanyName", "hAx Studios Ltd.\0"
+            VALUE "FileDescription", "hAx State Changer for FFXI\0"
+            VALUE "FileVersion", "1, 1, 0, 1\0"
+            VALUE "InternalName", "hAxFFXI\0"
+            VALUE "LegalCopyright", "Copyright © 2005 hAx Studios Ltd.\0"
+            VALUE "LegalTrademarks", "hAx Studios Ltd. <http://hax-studios.net>\0"
+            VALUE "OriginalFilename", "hAxChocobo.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "hAx Studios Ltd. FFXI State Changer\0"
+            VALUE "ProductVersion", "1, 1, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BANNER              BITMAP  DISCARDABLE     "res\\hAx FFXI State Changer.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
